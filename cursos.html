@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscripción a Cursos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Formulario de Inscripción a Cursos</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Suscribirse</a></li>
+        <li><a href="lenguajes.html">Lenguajes</a></li>
+        <li><a href="validacion.html">Validación</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <form action="procesar_curso.php" method="post">
+        <fieldset>
+          <legend>Datos del participante</legend>
+
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+
+          <label for="apellido">Apellido:</label><br>
+          <input type="text" id="apellido" name="apellido" required><br><br>
+
+          <label for="dni">Documento de identidad:</label><br>
+          <input type="text" id="dni" name="dni" required placeholder="DNI o equivalente"><br><br>
+
+          <label for="correo">Correo electrónico:</label><br>
+          <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com"><br><br>
+
+          <label for="curso">Curso:</label><br>
+          <select id="curso" name="curso" required>
+            <option value="">-- Selecciona un curso --</option>
+            <option value="Desarrollo Web">Desarrollo Web</option>
+            <option value="Análisis de Datos">Análisis de Datos</option>
+            <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+          </select><br><br>
+
+          <p><strong>Modalidad:</strong></p>
+          <label><input type="radio" name="modalidad" value="Presencial" required> Presencial</label><br>
+          <label><input type="radio" name="modalidad" value="Virtual"> Virtual</label><br><br>
+
+          <p><strong>Horarios disponibles:</strong></p>
+          <label><input type="checkbox" name="horarios[]" value="Mañana"> Mañana</label><br>
+          <label><input type="checkbox" name="horarios[]" value="Tarde"> Tarde</label><br>
+          <label><input type="checkbox" name="horarios[]" value="Noche"> Noche</label><br><br>
+
+          <label for="comentarios">Comentarios adicionales:</label><br>
+          <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escribe aquí tus dudas o preferencias..."></textarea><br><br>
+
+          <button type="submit">Enviar</button>
+          <button type="reset">Restablecer</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Boletín de Noticias. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
